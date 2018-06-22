@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Theme jquery mobile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="lib/jquery/jquery-1.11.1.js"></script>
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <!-- View 1 -->
+    <div data-role="page" id="view1" class="home">
+        <!-- nav -->
+        <div data-display="overlay" data-role="panel" id="nav-view1" class="sidebar">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#view1">Vista 1</a></li>
+                <li><a href="#view2">Vista 2</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#dialog" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Ventana de diálogo</a>
+            </div>
+        </div>
+        <!-- /nav -->
+        <!-- header -->
+        <header data-role="header">
+            <a href="#nav-view1" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Vista 1</h1>
+        </header>
+        <!-- /header -->
+        <!-- view content -->
+        <main role="main" class="ui-content">
+            <p> Vista 1 </p>
+        </main>
+        <!-- /view content -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#view1" data-icon="grid">Vista 1</a>
+                    </li>
+                    <li>
+                        <a href="#view2" data-icon="star">Vista 2</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- /footer -->
+    </div>
+    <!-- / View 1-->
+    <!-- View 2 -->
+    <div data-role="page" id="view2" class="home">
+        <!-- nav -->
+        <div data-display="overlay" data-role="panel" id="nav-view2" class="sidebar">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#view1">Vista 1</a></li>
+                <li><a href="#view2">Vista 2</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#dialog" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Ventana de diálogo</a>
+            </div>
+        </div>
+        <!-- /nav -->
+        <!-- header -->
+        <header data-role="header">
+            <a href="#nav-view2" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Vista 2</h1>
+        </header>
+        <!-- /header -->
+        <!-- view content -->
+        <main role="main" class="ui-content">
+            <p> Vista 2 </p>
+            <button id="btn-example" class="ui-btn ui-icon-delete ui-btn-icon-left">Volver a vista 1 desde JS</button>
+        </main>
+        <!-- /view content -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#view1" data-icon="grid">Vista 1</a>
+                    </li>
+                    <li>
+                        <a href="#view2" data-icon="star">Vista 2</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- /footer -->
+    </div>
+    <!-- / View 2-->
+    <!-- Dialog -->
+    <div data-role="dialog" id="dialog">
+        <div data-role="header">
+            <h1> Ejemplo de ventana modal de jquery mobile </h1>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, omnis nobis est nihil veritatis obcaecati ipsa facere magnam quisquam esse voluptatibus corporis expedita reiciendis autem, maiores nam eum illo nostrum.</p>
+        </div>
+    </div>
+</body>
+
+</html>

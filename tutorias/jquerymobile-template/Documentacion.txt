@@ -1,0 +1,8 @@
+Ejemplos de componentes ya hechos en jquerymobile (CSS+JS)
+http://demos.jquerymobile.com/1.4.5/
+
+Grilla y layout
+https://api.jquerymobile.com/1.4/grid-layout/
+
+API para programar con JS
+https://api.jquerymobile.com/
