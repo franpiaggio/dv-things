@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.mrcuento.app"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+  <name>Mr Cuento</name>
+
+  <description>
+      Aplicación de cuentos infantiles
+  </description>
+
+  <author href="" email="ejemplo@ejemplo.com">
+      Francisco Piaggio
+  </author>
+  <platform name="android">
+        <icon src="img/icons/mdpi.png" density="mdpi" />
+        <icon src="img/icons/hdpi.png" density="hdpi" />
+        <icon src="img/icons/xhdpi.png" density="xhdpi" />
+        <icon src="img/icons/xxhdpi.png" density="xxhdpi" />
+        <icon src="img/icons/xxxhdpi.png" density="xxxhdpi" />
+  </platform>
+  <splash src="img/splash/splash-land-hdpi.png" platform="android" qualifier="hdpi" />
+  <splash src="img/splash/splash-land-ldpi.png" platform="android" qualifier="ldpi" />
+  <splash src="img/splash/splash-land-mdpi.png" platform="android" qualifier="mdpi" />
+  <splash src="img/splash/splash-land-xhdpi.png" platform="android" qualifier="xhdpi" />
+  <splash src="img/splash/splash-land-hdpi.png" platform="winphone" />
+  <platform name="winphone">
+     <icon src="img/icons/mdpi.png"/>
+  </platform>
+  <preference name="SplashScreen" value="screen"/>
+
+</widget>

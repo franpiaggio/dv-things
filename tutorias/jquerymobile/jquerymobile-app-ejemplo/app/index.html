@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mr Cuento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="./styles/mrcuento-theme.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="lib/jquery/jquery-1.11.1.js"></script>
+    <script src="lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <!-- Start of home -->
+    <div data-role="page" id="welcome" class="welcome">
+        <main role="main" class="ui-content">
+            <img src="./img/mrcuento.png" alt="logo de la aplicación">
+            <p class="title">Hola!</p>
+            <form id="name" action="#" data-ajax="false">
+                <label for="confirm" class="subtitle">¿Cuál es tu nombre?</label>
+                <input type="text" placeholder="Nombre" id="userName" class="input">
+                <input type="submit" value="Continuar" id="welcomeBtn" class="btn">
+            </form>
+        </main>
+        <!-- /content -->
+    </div>
+    <!-- /page -->
+    <!-- Start of home -->
+    <div data-role="page" id="home" class="home">
+        <div data-display="overlay" data-role="panel" id="nav-home" class="sidebar">
+            <img src="./img/logo-sidebar.png" alt="logo en miniatura">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cat">Categorias</a></li>
+                <li><a href="#favs">Favoritos</a></li>
+                <li><a href="#config">Configuraciones</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#aboutus" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Acerca de</a>
+            </div>
+        </div>
+        <!-- /panel -->
+        <header data-role="header">
+            <a href="#nav-home" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Home</h1>
+        </header>
+        <!-- /header -->
+        <main role="main" class="ui-content">
+            <img src="./img/mrcuento.png" alt="logo de la aplicación">
+            <p class="title">Hola <span id="homeName"></span>!</p>
+            <div class="recomended">
+                <p class="subtitle">Hoy te recomiendo estos cuentos:</p>
+                <ul id="recomended" data-role="listview">
+                </ul>
+            </div>
+        </main>
+        <!-- /content -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#cat" data-icon="grid">Categorías</a>
+                    </li>
+                    <li>
+                        <a href="#favs" data-icon="star">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- /page -->
+    <!-- Start of cat -->
+    <div data-role="page" id="cat" class="cat">
+        <div data-display="overlay" data-role="panel" id="nav-cat" class="sidebar">
+            <img src="./img/logo-sidebar.png" alt="logo en miniatura">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cat">Categorias</a></li>
+                <li><a href="#favs">Favoritos</a></li>
+                <li><a href="#config">Configuraciones</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#aboutus" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Acerca de</a>
+            </div>
+        </div>
+        <!-- /panel -->
+        <header data-role="header">
+            <a href="#nav-cat" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Categorías</h1>
+        </header>
+        <!-- /header -->
+        <main role="main" class="ui-content">
+            <p class="title">Categorías</p>
+            <div class="cat-container ui-grid-a">
+                <div id="aventuras" class="cat-box ui-block-a">
+                    <img src="./img/cat-1.png" alt="img de categoria">
+                    <p>Aventuras</p>
+                </div>
+                <div id="fantasia" class="cat-box ui-block-b">
+                    <img src="./img/cat-2.png" alt="img de categoria">
+                    <p>Fantasía</p>
+                </div>
+            </div>
+            <div class="cat-container ui-grid-a">
+                <div id="misterio" class="cat-box ui-block-a">
+                    <img src="./img/cat-3.png" alt="img de categoria">
+                    <p>Misterio</p>
+                </div>
+                <div id="animales" class="cat-box ui-block-b">
+                    <img src="./img/cat-4.png" alt="img de categoria">
+                    <p>Animales</p>
+                </div>
+            </div>
+        </main>
+        <!-- /content -->
+        <!-- footer -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#cat" data-icon="grid">Categorías</a>
+                    </li>
+                    <li>
+                        <a href="#favs" data-icon="star">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- /page -->
+    <!-- Start of cat-res -->
+    <div data-role="page" id="cat-res" class="cat-res">
+        <div data-display="overlay" data-role="panel" id="cat-res" class="sidebar">
+            <img src="./img/logo-sidebar.png" alt="logo en miniatura">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cat">Categorias</a></li>
+                <li><a href="#favs">Favoritos</a></li>
+                <li><a href="#config">Configuraciones</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#aboutus" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Acerca de</a>
+            </div>
+        </div>
+        <!-- /panel -->
+        <header data-role="header">
+            <a href="#cat-res" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Resultados de categoría</h1>
+        </header>
+        <!-- /header -->
+        <main role="main" class="ui-content">
+            <p class="title"><span id="catname"></span></p>
+            <div class="cat-res-list">
+                <ul id="cat-res-list" data-role="listview">
+                </ul>
+            </div>
+            <a type="button" data-role="button" href="#cat" data-direction="reverse" data-icon="arrow-l" value="Volver"  class="btn favs back"> Volver </a>
+        </main>
+        <!-- /content -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#cat" data-icon="grid">Categorías</a>
+                    </li>
+                    <li>
+                        <a href="#favs" data-icon="star">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- /page -->
+    <!-- Start of story -->
+    <div data-role="page" id="story" class="story">
+        <div data-display="overlay" data-role="panel" id="nav-story" class="sidebar">
+            <img src="./img/logo-sidebar.png" alt="logo en miniatura">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cat">Categorias</a></li>
+                <li><a href="#favs">Favoritos</a></li>
+                <li><a href="#config">Configuraciones</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#aboutus" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Acerca de</a>
+            </div>
+        </div>
+        <!-- /panel -->
+        <header data-role="header">
+            <a href="#nav-story" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Home</h1>
+        </header>
+        <!-- /header -->
+        <main role="main" class="ui-content">
+            <div class="ui-corner-all custom-corners story-card">
+                <div class="ui-bar ui-bar-a" id="#story-name">
+                    <h2>Título</h2>
+                </div>
+                <div class="ui-body ui-body-a">
+                    <p id="story-content"></p>
+                </div>
+            </div>
+            <div class="button-box">
+                <input type="button" id="saveStory" data-icon="star" value="Guardar a favoritos" id="welcomeBtn" class="btn favs">
+                <button id="deleteFavs" class="ui-btn ui-icon-delete ui-btn-icon-left none">Borrar de favoritos</button>
+                <a type="button" data-role="button" data-rel="back" data-direction="reverse" data-icon="arrow-l" value="Volver" id="welcomeBtn" class="btn favs back"> Volver </a>
+            </div>
+            <div data-role="popup" id="popupBasic">
+                <div role="main" class="ui-corner-bottom ui-content">
+                    <p>Cuento agregado a tus favoritos.</p>
+                    <a href="#" data-position="right" data-role="button" data-inline="true" data-rel="back" data-theme="a" class="ui-link ui-btn ui-btn-a ui-btn-inline ui-shadow ui-corner-all" role="button">Aceptar</a>
+                </div>
+            </div>
+            <div data-role="popup" id="popupRemove">
+                <div role="main" class="ui-corner-bottom ui-content">
+                    <p>Cuento quitado de favoritos.</p>
+                    <a href="#" data-position="right" data-role="button" data-inline="true" data-rel="back" data-theme="a" class="ui-link ui-btn ui-btn-a ui-btn-inline ui-shadow ui-corner-all" role="button">Aceptar</a>
+                </div>
+            </div>
+        </main>
+        <!-- /content -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#cat" data-icon="grid">Categorías</a>
+                    </li>
+                    <li>
+                        <a href="#favs" data-icon="star">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- /page -->
+    <!-- Start of favs -->
+    <div data-role="page" id="favs">
+        <div data-display="overlay" data-role="panel" id="cat-favs" class="sidebar">
+            <img src="./img/logo-sidebar.png" alt="logo en miniatura">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cat">Categorias</a></li>
+                <li><a href="#favs">Favoritos</a></li>
+                <li><a href="#config">Configuraciones</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#aboutus" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Acerca de</a>
+            </div>
+        </div>
+        <!-- /panel -->
+        <header data-role="header">
+            <a href="#cat-favs" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Favoritos</h1>
+        </header>
+        <!-- /header -->
+        <main role="main" class="ui-content">
+            <p class="title">Mis cuentos favoritos</p>
+            <div class="cat-res-list">
+                <ul id="favs-list" data-role="listview" data-filter="true"  data-filter-placeholder="Buscar..." >
+                </ul>
+            </div>
+        </main>
+        <!-- /content -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#cat" data-icon="grid">Categorías</a>
+                    </li>
+                    <li>
+                        <a href="#favs" data-icon="star">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- /page -->
+    <!-- Start of config -->
+    <div data-role="page" id="config" class="config">
+        <div data-display="overlay" data-role="panel" id="nav-config" class="sidebar">
+            <img src="./img/logo-sidebar.png" alt="logo en miniatura">
+            <p class="subtitle menu">Menu</p>
+            <ul data-role="listview" class="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cat">Categorias</a></li>
+                <li><a href="#favs">Favoritos</a></li>
+                <li><a href="#config">Configuraciones</a></li>
+            </ul>
+            <div class="button-box">
+                <a href="#aboutus" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-info ui-btn-icon-left">Acerca de</a>
+            </div>
+        </div>
+        <!-- /panel -->
+        <header data-role="header">
+            <a href="#nav-config" class="ui-btn ui-shadow ui-corner-all ui-icon-bars ui-btn-icon-notext"> </a>
+            <h1 class="hidden">Home</h1>
+        </header>
+        <!-- /header -->
+        <main role="main" class="ui-content">
+            <p class="title">Configuraciones</p>
+            <div class="inputs-box">
+                <p class="subtitle">Nombre</p>
+                <input id="savedUserName" type="text">
+                <p class="subtitle">Tamaño de letra</p>
+                <select name="font" id="fontSize">
+                    <option value="normal">Normal</option>
+                    <option value="big">Grande</option>
+                </select>
+                <input data-role="button" type="button" value="Guardar cambios" id="saveConfigs" class="btn">
+
+                <a type="button" data-role="button" data-icon="delete" id="deleteAll" class="btn favs back deleteStorage"> Borrar mi información </a>
+            </div>
+            <div data-role="popup" id="popupConfig">
+                <div role="main" class="ui-corner-bottom ui-content">
+                    <p>Configuración guardada</p>
+                    <a href="#" data-position="right" data-role="button" data-inline="true" data-rel="back" data-theme="a" class="ui-link ui-btn ui-btn-a ui-btn-inline ui-shadow ui-corner-all" role="button">Aceptar</a>
+                </div>
+            </div>
+            <div data-role="popup" id="deleteConfigpopup">
+                <div role="main" class="ui-corner-bottom ui-content">
+                    <p>Se borró la configuración</p>
+                    <a href="#" data-position="right" data-role="button" data-inline="true" data-rel="back" class="ui-link ui-btn ui-btn-a ui-btn-inline ui-shadow ui-corner-all" role="button">Aceptar</a>
+                </div>
+            </div>
+        </main>
+        <!-- /content -->
+        <!-- footer -->
+        <footer class="footer" data-role="footer">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li>
+                        <a href="#cat" data-icon="grid">Categorías</a>
+                    </li>
+                    <li>
+                        <a href="#favs" data-icon="star">Favoritos</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- /page -->
+    <!-- Start of aboutus -->
+    <div data-role="dialog" id="aboutus">
+        <div data-role="header">
+            <h1> Información </h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h2> Acerca de Mr. Cuento </h2>
+            <h3>Carrera:</h3>
+            <p>Diseño Web - Turno Noche</p>
+            <h3>Materia</h3>
+            <p>Tecnología de las comunicaciones II</p>
+            <h3>Comisión B</h3>
+            <h3>Cursada</h3>
+            <p> 2do Cuatrimestre - 2014</p>
+            <br>
+            <p>Desarrollada por Francico Piaggio</p>
+        </div>
+    </div>
+</body>
+
+</html>

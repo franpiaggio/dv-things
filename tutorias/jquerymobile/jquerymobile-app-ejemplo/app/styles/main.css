@@ -1,0 +1,436 @@
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local("Roboto Thin"), local("Roboto-Thin"), url(../fonts/Roboto/Roboto-Thin.ttf) format("woff2");
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), url(../fonts/Roboto/Roboto-Regular.ttf) format("woff2");
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Bold"), local("Roboto-Bold"), url(../fonts/Roboto/Roboto-Bold.ttf) format("woff2");
+}
+
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"), url(../fonts/Roboto/Roboto-Black.ttf) format("woff2");
+}
+
+/* General */
+/* Helpers */
+.hidden {
+  opacity: 0;
+}
+
+.none {
+  display: none;
+}
+
+html,
+body,
+p,
+a,
+h1,
+div {
+  font-family: 'Roboto', sans-serif !important;
+  text-shadow: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form & Components */
+.title {
+  font-size: 2.8rem;
+  margin: 0;
+  padding: .2em 0;
+  color: #75C156;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title:first-letter {
+  text-transform: uppercase;
+}
+
+.subtitle {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem !important;
+  color: white;
+}
+
+.ui-icon-bars {
+  border: none;
+  background: #3A6E91 !important;
+}
+
+.input {
+  background: white !important;
+}
+
+.btn:disabled {
+  background-color: #BCBFC1;
+}
+
+.ui-input-text,
+.ui-input-btn {
+  border-radius: inherit !important;
+}
+
+/* Pages */
+.welcome {
+  background-image: url(../img/background-welcome.png) !important;
+  background-color: #4F90CD;
+  background-position: 0 -52px !important;
+}
+
+.welcome .title {
+  color: white;
+}
+
+.welcome .subtitle {
+  text-align: center;
+}
+
+.welcome .ui-input-btn {
+  background: #75C156 !important;
+  border: none;
+  color: white;
+  font-weight: normal;
+}
+
+.welcome .ui-input-btn:active, .welcome .ui-input-btn:hover {
+  color: white !important;
+  background: #529436;
+}
+
+.welcome main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+}
+
+.home main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  min-height: 80vh;
+}
+
+.home main img {
+  max-height: 130px;
+}
+
+.home .subtitle {
+  margin: 0;
+  padding: 0 0 1.5em 0;
+  color: #3A6E91;
+  text-align: center;
+}
+
+.home .recomended {
+  width: 100%;
+}
+
+.home .recomended a {
+  color: #81919E;
+}
+
+.cat main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  min-height: 80vh;
+}
+
+.cat .cat-container {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: .2em;
+}
+
+.cat .cat-container .cat-box {
+  background: #4F90CD;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  padding: .5em;
+  margin: 0;
+  border: .2em solid white;
+  border-radius: 10%;
+}
+
+.cat .cat-container p {
+  margin: .3em 0;
+  color: white;
+  font-weight: bold;
+}
+
+.cat-res main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  min-height: 80vh;
+}
+
+.cat-res .cat-res-list {
+  width: 100%;
+}
+
+.cat-res .cat-res-list a {
+  color: #81919E;
+}
+
+.story main {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  min-height: 80vh;
+}
+
+.story .story-card {
+  width: 100%;
+}
+
+.story .button-box {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.story .button-box .ui-input-btn:nth-of-type(1) {
+  background: #75C156 !important;
+  border: none;
+  color: white;
+  font-weight: normal;
+}
+
+.story .button-box .ui-input-btn:nth-of-type(1):active, .story .button-box .ui-input-btn:nth-of-type(1):hover {
+  color: white !important;
+  background: #529436;
+}
+
+.story .ui-corner-bottom.ui-content {
+  text-align: right !important;
+}
+
+.config .subtitle {
+  color: #3A6E91;
+}
+
+.config .ui-input-btn {
+  background: #75C156 !important;
+  border: none;
+  color: white;
+  font-weight: normal;
+}
+
+.config .ui-input-btn:active, .config .ui-input-btn:hover {
+  color: white !important;
+  background: #529436;
+}
+
+.config .deleteStorage {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+div[data-role=page] {
+  background-image: url(../img/background.png);
+  background-position: 0px -24px;
+  background-repeat: repeat !important;
+}
+
+.sidebar {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.sidebar .ui-panel-inner {
+  width: 100%;
+}
+
+.sidebar .ui-panel-inner img {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: flex;
+}
+
+.sidebar .button-box {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.sidebar .button-box .info {
+  background-color: #3A6E91 !important;
+  color: white !important;
+}
+
+.sidebar .button-box .close {
+  background-color: #ED1C6E !important;
+  color: white !important;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9 !important;
+}
+
+.footer li a {
+  background: #3A6E91 !important;
+  border-color: #3A6E91 !important;
+  color: white !important;
+}
+
+.footer li a:nth-of-type(1) {
+  border-right: 1px solid white !important;
+}
+
+.footer .ui-btn::after {
+  background-color: #3A6E91 !important;
+}
+
+.footer .ui-btn-active {
+  background-color: #2b526d !important;
+}
+
+.footer .ui-btn-active.ui-btn::after {
+  background-color: #2b526d !important;
+}
+
+.ui-icon-loading {
+  background: url("../lib/jquery/ajax-loader.png");
+  background-size: 46px 46px;
+  width: 46px;
+  height: 46px;
+  -webkit-transform: rotate(360deg);
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.welcome .ui-input-btn.ui-btn-disabled,
+.story .ui-input-btn.ui-btn-disabled {
+  background: #BCBFC1 !important;
+}
+
+.ui-listview {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.ui-listview a {
+  border: none !important;
+  border-bottom: 1px solid #BCBFC1 !important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  color: #BCBFC1;
+}
+
+.ui-last-child a {
+  border: none !important;
+}
+
+#fontSize-button {
+  text-align: left !important;
+}
+
+.menu.subtitle {
+  color: #3A6E91;
+  text-align: center;
+}
+
+.sidemenu a,
+.sidemenu li {
+  background-color: white !important;
+}
+
+.sidemenu a:active,
+.sidemenu a:hover,
+.sidemenu li:active,
+.sidemenu li:hover {
+  background-color: #e8e8e8 !important;
+  color: black !important;
+}
+
+.button-box {
+  margin-top: 25px;
+}
+
+#story h2:first-letter {
+  text-transform: uppercase;
+}
