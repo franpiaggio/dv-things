@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba after-before</title>
+    <style>
+        /*
+        * Existe las pseudoetiquetas:
+
+        * Son etiquetas que se insertan desde CSS
+        * Pueden recibir contenido de texto
+        * Pueden ser tratadas como cualquier caja del css
+        * Son ideales para detalles estéticos ya que no ensucian la semántica del html
+
+        */
+        h1:before{
+            content: '- Before-';
+            color: red;
+        }
+        h1:after{
+            content: '- After -';
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Este título tiene contenido insertado desde css</h1>
+</body>
+</html>

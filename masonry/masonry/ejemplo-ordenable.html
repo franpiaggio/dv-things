@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/estilos.css">
+    <title>Ejemplo masonry ordenable</title>
+</head>
+
+<body>
+    <main class="contenedor-principal">
+        <h1>Ejemplo layout tipo masonry</h1>
+        <div class="botonera">
+            <h2>Botones ordenables</h2>
+            <button class="boton-filtro" data-filtro="gatos">Filtrar gatitos</button>
+            <button class="boton-filtro" data-filtro="perros">Filtrar perritos</button>
+            <button class="boton-filtro" data-filtro="otros">Otros</button>
+            <button class="boton-filtro" data-filtro="">Todo</button>
+        </div>
+        <div class="imagenes">
+            <img class="imagen" src="./img/01.gif" data-groups='["perros"]' class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/02.gif" data-groups='["perros"]' class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/03.gif" data-groups='["otros"]' class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/04.gif" data-groups='["gatos"]' class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/05.gif" data-groups='["perros"]' class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/06.gif" data-groups='["perros"]'class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/07.gif" data-groups='["perros"]'class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/08.gif" data-groups='["gatos"]' class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/09.gif" data-groups='["perros"]' class="img-responsive" alt="prueba">
+            <img class="imagen" src="./img/10.gif" data-groups='["perros", "otros"]' class="img-responsive" alt="prueba">
+        </div>
+    </main>
+    <!-- Código que le da funcionalidad a la galería -->
+    <script src="librerias/jquery.min.js"></script>
+    <script src="librerias/shuffle.js"></script>
+    <!-- Código propio de configuración de la librería -->
+    <script src="script/ordenar.js"></script>
+</body>
+
+</html>

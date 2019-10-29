@@ -1,0 +1,60 @@
+/* 
+    Estilos globales y comunes a todos los html
+    Menues, contenedores, formateos de texto, etc...
+    
+*/
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.contenedor-principal{
+    width: 900px;
+    margin: 0px auto;
+}
+
+.menu-principal{
+    background-color: #247BA0;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.menu-principal .menu{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.menu-principal h1{
+    margin: 0;
+}
+.menu li{
+    list-style-type: none;
+}
+.menu-link{
+    display: block;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #247BA0;
+}
+
+.link-actual{
+    background-color: #FB3640;
+    color: white;
+}
+
+/*
+* Estilos particulares de cada sección
+*/
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo video de fondo</title>
+    <style>
+        /*
+        * Estilos solo para el ejemplo, esto probablemente lo hace Bootstrap
+        */
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            margin: 0;
+        }
+
+        /*
+        * Estilos para que el video quede como background de todo el main
+        */
+        .video-container{
+            /* Con esto podes posicionar el <video> con position absolute */
+            position: relative; 
+            /* 
+                * Le doy un tamaño mínimo
+                * Cambiale la medida a lo que te venga más cómodo
+                * Pero que el contenedor tenga un tamaño y el video 
+                  interno se adapte a eso
+            */
+            min-height: 60vh;
+            /* Si el video "sobresale" lo oculto */
+            overflow: hidden;
+
+            /*
+            * Ejemplo de contenido alineado en el video-container
+            */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .background-video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 
+                Adapto el tamaño del video al tamaño de su contenedor
+                Podes variar el tamaño del <main class="video-container">
+                para que se vaya adaptando
+            */
+            min-width: 100%;
+            min-height: 100%;
+            /* El video se ve atras */
+            z-index: 1;
+        }
+        .video-container__content{
+            /* El texto del banner se ve por encima */
+            z-index: 2;
+        }
+        .seccion-ejemplo{
+            padding: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main class="video-container">
+        <!--
+            El video al tener position absolute se pone como overlay
+            Para controlar cuál se ve al frente uso z-index
+        -->
+        <video autoplay muted loop class="background-video">
+            <source 
+                src="./video/video_kue-le_1410x539.mp4" 
+                type="video/mp4" d
+                autoplay="true" 
+                loop
+                data-wf-ignore="true">
+        </video>
+        <!-- 
+            El contenido de texto lo encierro en un div
+            para darle a esa caja directamente un z-index mayor
+            y por ende que se vea al frente
+        -->
+        <div class="video-container__content">
+            <h1>Título de ejemplo para ver el overlay</h1>
+            <p>De la misma forma podes poner el navbar o cualquier cosa</p>
+        </div>
+    </main>
+    <section class="seccion-ejemplo">
+        <h2>Ejemplo</h2>
+        <p>Esto es para que veas que el contenido se acomoda solo abajo, porque el main tiene un min-height.</p>
+        <p>Lo que veas recortado del video lo podes acomodar con los tamaños del video y la caja, pero siempre en algunas resoluciones algo va a "salirse", por eso lo oculto</p>
+    </section>
+</body>
+</html>

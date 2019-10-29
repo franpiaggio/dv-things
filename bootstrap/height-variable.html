@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Manejo de height según el contenido</title>
+    <style>
+        code {
+            font-size: 87.5%;
+            color: #e83e8c;
+            word-break: break-word;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1 class="border-bottom py-3">Controlar el height de los elementos</h1>
+
+        <!--
+            Expicación del problema con los height variables
+        -->
+        <h2 class="mt-3 text-danger">El problema</h2>
+        <ul>
+            <li>Los elementos internos de una columna <code>col-*</code> no ocupan el 100% del height</li>
+            <li>Por defecto las columnas siempre miden lo mismo de alto</li>
+            <li>Para verificar que esto es así le agregamos un borde a las columnas con <code>.border-danger</code></li>
+            <li>Queda en evidencia que las columnas tienen la misma altura, pero no su contenido.</li>
+        </ul>
+        <div class="row mt-2">
+            <div class="col-md-4 border border-danger">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 border border-danger">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem? Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Ab, cupiditate. Reiciendis sapiente necessitatibus dolore
+                            possimus officiis, iste dolor sunt aspernatur molestias dolorem sint reprehenderit ex culpa
+                            quidem quasi voluptatum minima.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 border border-danger">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-danger mt-3" role="alert">
+            <span> El problema entonces no es de las columnas, sino de los elementos internos. En este caso el
+                componente card </span>
+        </div>
+
+        <!--
+            Solución con clases de Bootstrap
+        -->
+
+        <h2 class="mt-3">Usando flex para ocupar el 100%</h2>
+        <ul>
+            <li>La clase de Bootstrap <code>.d-flex</code> aplica lógicamente un display flex al elemento seleccionado
+            </li>
+            <li>El efecto "secundario" al aplicar este tipo de display es que los items internos ocupen un 100% del
+                height</li>
+            <li>Esto sucede porque se aplica por defecto la propiedad <code>align-items: stretch</code></li>
+            <li>Con esta lógica entonces si a todos los elementos <code>col-*</code> le aplicamos la clase
+                <code>d-flex</code> sus elementos internos van a "estirarse" hasta el 100% del height</li>
+            <li>En este caso esto se aplica a los componentes <code>.card</code> </li>
+        </ul>
+        <div class="row mb-5">
+            <div class="col-md-4 d-flex">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem? Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Ab, cupiditate. Reiciendis sapiente necessitatibus dolore
+                            possimus officiis, iste dolor sunt aspernatur molestias dolorem sint reprehenderit ex culpa
+                            quidem quasi voluptatum minima.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-success mt-3" role="alert">
+            <span> Esta es una solución simple, pero aún tenemos que controlar el height del <code>.row</code> o
+                <code>.col-*</code> para controlar el height de las <code>.card</code> </span>
+        </div>
+
+        <!--
+            Solución más custom, en algunos casos más práctica si tenemos un diseño específico
+        -->
+        <h2 class="mt-3">Usando tamaños mínimos</h2>
+        <ul>
+            <li>Los elementos de Bootstrap pueden ser customizados</li>
+            <li>Si analizamos el elemento <code>.card</code> vamos a ver que internamente contiene un elemento
+                <code>.card-body</code> </li>
+            <li>Podríamos darle tamaños mínimos y máximos para controlar su flexibilidad de manera más exacta</li>
+            <li>Para este ejemplo voy a agregar entonces unos estilos personalizados y eliminar el <code>.d-flex</code>
+            </li>
+        </ul>
+        <style>
+            /*
+            * Agrego la etiqueta <style> acá solo para fines prácticos del ejemplo, nunca hagan esto!
+            */
+            .contenido-tarjeta {
+                /* Con min-height me aseguro de que todas tengan la misma altura */
+                min-height: 350px;
+            }
+        </style>
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body contenido-tarjeta">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body contenido-tarjeta">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem? Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Ab, cupiditate. Reiciendis sapiente necessitatibus dolore
+                            possimus officiis, iste dolor sunt aspernatur molestias dolorem sint reprehenderit ex culpa
+                            quidem quasi voluptatum minima.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body contenido-tarjeta">
+                        <p class="card-text">Lorem ipsum dolor sit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--
+            Controlando el overflow
+        -->
+        <h2 class="mt-3">Controlando el overflow</h2>
+        <ul>
+            <li>Es posible dejar un height fijo y si algún elemento sobrepasa su tamaño controlar su comportamiento</li>
+            <li>Podemos usar un scroll u ocultar el contenido</li>
+            <li>En este ejemplo vamos a afectar al <code>.contenido-tarjeta</code> y a cada uno darle un overflow distinto. </li>
+        </ul>
+        <style>
+            .contenido-overflow{
+                /* Con un height fijo determino el tamaño y luego con sus distintos comportamientos */
+                height: 350px;
+            }
+            /*
+            * El contenido de la 1er tarjeta
+            */
+            .overflow-1{
+                /* Por defecto oculto el contenido */
+                overflow: hidden;
+            }
+            /*
+            * El contenido de la 2da tarjeta
+            */
+            .overflow-2{
+                /*
+                * overflow afecta al eje x y al eje y (arriba, abajo, izquierda y derecha)
+                * overflow-y afecta hacia arriba y abajo
+                * overflow-x afecta hacia la izquierda y derecha
+                * overflow-y: auto --> agrega el scroll solo en caso de que el contenido exceda el height
+                */
+                overflow-y: auto;
+            }
+            .overflow-3{
+                /* El scroll se ve siempre aunque no lo necesite */
+                overflow: scroll;
+            }
+        </style>
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body contenido-overflow overflow-1">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem? Lorem, ipsum dolor sit amet consectetur adipisicing elit. In excepturi pariatur alias nisi neque perferendis velit officia quaerat vero quibusdam quia, expedita nobis quis consequatur dolore facilis quos exercitationem corporis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nulla maiores dicta officia corporis accusantium quod cupiditate aut cum a dolores, earum quas nisi libero incidunt quasi! Deserunt, repellendus nostrum?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body contenido-overflow overflow-2">
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quia eum
+                            illum inventore placeat ipsam aliquam quaerat, provident saepe natus accusamus doloremque
+                            reprehenderit nemo nihil totam alias in obcaecati. Autem? Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Ab, cupiditate. Reiciendis sapiente necessitatibus dolore
+                            possimus officiis, iste dolor sunt aspernatur molestias dolorem sint reprehenderit ex culpa
+                            quidem quasi voluptatum minima. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sit neque, vero dignissimos doloremque iusto quisquam. Animi perferendis rem, deleniti vel a ipsa nobis, odio eius nihil, accusamus corporis commodi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis voluptate voluptatibus dicta facere quas possimus minus quidem sapiente nostrum laudantium, corporis, unde quaerat necessitatibus iste natus accusamus soluta et vitae!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/350" alt="Card image cap">
+                    <div class="card-body contenido-overflow overflow-3">
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tenetur perferendis maxime rem natus eius necessitatibus veritatis nihil esse, hic molestiae ipsa nisi cumque aliquam minus ipsum sequi dolorem optio?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

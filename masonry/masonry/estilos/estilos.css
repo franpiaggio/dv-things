@@ -1,0 +1,18 @@
+.contenedor-principal{
+    width: 1200px;
+    margin: 0px auto;
+    border: 1px solid red;
+}
+
+.img-responsive{
+    max-width: 100%;
+}
+
+.imagen{
+    width: 20%;
+    margin: 0;
+}
+
+.botonera{
+    margin-bottom: 50px;
+}

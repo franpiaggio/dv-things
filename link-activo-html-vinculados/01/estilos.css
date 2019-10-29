@@ -1,0 +1,31 @@
+/* 
+    En cada html uso esta clase en distintos links 
+    Al navegar entre los documentos, solo va a estar en rojo el link
+    que hace referencia al documento actual
+*/
+.seccion-actual{
+    color: red;
+}
+
+/*
+* Luego puedo separar mi código en estilos globales y estilos particulares
+*/
+
+/* Globales */
+p{
+    font-family: sans-serif;
+}
+
+/* Particulares */
+
+.seccion1 p{
+    color: blue;
+}
+
+.seccion2 p{
+    color: red;
+}
+
+.seccion3 p{
+    color: green;
+}

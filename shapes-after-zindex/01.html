@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prueba shape</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .banner{
+            min-height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shape-container{
+            min-height: 400px;
+            background-color: #35209E;
+            /* Alineo la imagen en relación a este relative */
+            position: relative;
+        }
+        .shape-container img{
+            position: absolute;
+            width: 100%;
+            /* 
+                Masomenos el tamaño en alto de la formita
+                en negativo lo lleva a la parte superior
+            */
+            top: -125px;
+        }
+    </style>
+</head>
+<body>
+    <section class="banner">
+        <h1>Prueba de shape ondulada</h1>
+    </section>
+    <section class="shape-container">
+        <!-- Esto no está del todo bien porque la imagen no es para nada semántica -->
+        <img src="shape.svg" alt="shape">
+    </section>
+</body>
+</html>

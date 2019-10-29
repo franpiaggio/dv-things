@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo z-index</title>
+    <style>
+        .caja {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .caja:nth-of-type(1) {
+            background-color: red;
+            z-index: 1;
+        }
+
+        .caja:nth-of-type(2) {
+            background-color: blue;
+            left: 50px;
+            top: 150px;
+            z-index: 3;
+            
+            /* Para que se vea el texto */
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .caja:nth-of-type(3) {
+            background-color: green;
+            left: 100px;
+            z-index: 2;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Con z-index en CSS puedo controlar el eje z
+        
+    -->
+    <div class="caja">
+        1
+    </div>
+    <div class="caja">
+        2
+    </div>
+    <div class="caja">
+        3
+    </div>
+</body>
+
+</html>

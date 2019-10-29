@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prueba shape</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .banner{
+            min-height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shape-container{
+            min-height: 400px;
+            background-color: #35209E;
+            position: relative;
+        }
+        /* Es bastante más 'semántico' que una imagen 100% estética esté controlada desde CSS */
+        .shape-container:before{
+            /* No tiene contenido de texto */
+            content: '';
+            background: url('shape.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            /* El alto del archivo svg lo fixeo */
+            height: 202px;
+            /* Esto lo hice medio a ojo */
+            top: -129px;
+        }
+    </style>
+</head>
+<body>
+    <section class="banner">
+        <h1>Prueba de shape ondulada</h1>
+    </section>
+    <section class="shape-container">
+    </section>
+</body>
+</html>
