@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/pixel.css">
+    <link rel="stylesheet" href="estilos/main.css">
+    <title>Adivinar el número</title>
+</head>
+
+<body>
+    <!-- Login -->
+    <main class="page">
+        <section class="intro">
+            <div class="ui heading wrapper">
+                <h1>Bienvenido <span class="emoji">👾</span></h1>
+            </div>
+            <div class="ui heading wrapper">
+                <h2>Ingresá tu nombre</h2>
+            </div>
+            <div class="ui input wrapper">
+                <input id="nombreInput" type="text" placeholder="Tu nombre" />
+                <button id="login" class="flat">Comenzar</button>
+            </div>
+        </section>
+        <!-- Instrucciones -->
+        <section class="instructions hide">
+            <div class="ui heading wrapper">
+                <h1>Hola <span id="nombre"></span> </h1>
+            </div>
+            <div class="ui container inset">
+                <p>
+                    <span class="destacado"> Esta es una aplicación de ejemplo para la materia DW1. </span> <br>
+                    En este mini juego vas a intentar adivinar un número antes de que explote la bomba, pero cuidado
+                    que tenes una cantidad limitada de intentos!
+                </p>
+            </div>
+            <div class="ui wrapper">
+                <button id="comenzar">
+                    <span>Comenzar</span>
+                    <span class="icon arrow-right">
+                </button>
+            </div>
+        </section>
+        <!-- Juego -->
+        <section class="game hide">
+            <div class="ui wrapper indicadores">
+                <div class="indicador-intentos"> Intentos: <span id="intentos"> </span> </div>
+                <div class="indicador-pistas">Pistas</div>
+            </div>
+            <img src="./img/bomb.gif" alt="Intro">
+            <div class="ui container inset">
+                <p>
+                    Estoy pensando un número entre 1 y 10...
+                </p>
+            </div>
+            <div class="ui input wrapper">
+                <input id="inputAdivinar" type="number" placeholder="Ingresá el número" />
+                <button id="botonAdivinar" class="flat">Adivinar</button>
+            </div>
+        </section>
+        <!-- Ganaste -->
+        <section id="win" class="result hide">
+            <div class="ui wrapper">
+                <h1> Ganaste </h1>
+            </div>
+            <img src="./img/win.gif" alt="sos lo mas">
+        </section>
+        <!-- Perdiste -->
+        <section id="loose" class="result hide">
+            <div class="ui wrapper">
+                <h1> Perdiste </h1>
+            </div>
+            <img src="./img/loose.gif" alt="siscate">
+        </section>
+    </main>
+    <script src="js/guess.js">
+    </script>
+</body>
+
+</html>

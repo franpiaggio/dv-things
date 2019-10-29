@@ -1,0 +1,463 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.ui {
+    font-family: "Press Start 2P", cursive;
+    padding: 16px 0;
+    display: flex;
+}
+
+.ui:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ui+.ui {
+    padding-top: 0px;
+}
+
+.ui h1,
+.ui h2,
+.ui h3,
+.ui h4,
+.ui h5,
+.ui h6 {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.ui button {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #cf9;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    font-family: "Press Start 2P", cursive;
+    height: 48px;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1;
+    margin-top: 4px;
+    margin-left: 16px;
+    white-space: nowrap;
+}
+
+.ui button:first-child {
+    margin-left: 0;
+}
+
+.ui button:hover {
+    background: #e6ffcc;
+}
+
+.ui button:active,
+.ui button.pressed {
+    box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(51, 51, 51, 0.84), 0 4px 0 rgba(51, 51, 51, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #bfff80;
+}
+
+.ui button.secondary {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #fc9;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    font-family: "Press Start 2P", cursive;
+    height: 48px;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1;
+    margin-top: 4px;
+    margin-left: 16px;
+    white-space: nowrap;
+}
+
+.ui button.secondary:first-child {
+    margin-left: 0;
+}
+
+.ui button.secondary:hover {
+    background: #ffe6cc;
+}
+
+.ui button.secondary:active,
+.ui button.secondary.pressed {
+    box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(51, 51, 51, 0.84), 0 4px 0 rgba(51, 51, 51, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #ffbf80;
+}
+
+.ui button.tertiary {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #f69;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    font-family: "Press Start 2P", cursive;
+    height: 48px;
+    cursor: pointer;
+    text-align: left;
+    line-height: 1;
+    margin-top: 4px;
+    margin-left: 16px;
+    white-space: nowrap;
+}
+
+.ui button.tertiary:first-child {
+    margin-left: 0;
+}
+
+.ui button.tertiary:hover {
+    background: #ff99bb;
+}
+
+.ui button.tertiary:active,
+.ui button.tertiary.pressed {
+    box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(51, 51, 51, 0.84), 0 4px 0 rgba(51, 51, 51, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #ff4d88;
+}
+
+.ui button+button {
+    margin-left: 16px;
+}
+
+.ui button+button:active {
+    margin-left: 16px;
+}
+
+.ui button.raised {
+    box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84), 8px 4px 0 rgba(0, 0, 0, 0.15), 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.ui button.raised:active,
+.ui button.raised.pressed {
+    box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(51, 51, 51, 0.84), 0 4px 0 rgba(51, 51, 51, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 0 0 16px;
+}
+
+.ui button.raised:first-child:active,
+.ui button.raised.pressed:first-child {
+    margin-left: 0;
+}
+
+.ui input,
+.ui textarea {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #fff;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(51, 51, 51, 0.84), 0 4px 0 rgba(51, 51, 51, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    font-family: "Press Start 2P", cursive;
+    width: 100%;
+    padding: 16px;
+    line-height: 1.42;
+    height: 48px;
+}
+
+.ui input+button,
+.ui textarea+button {
+    margin: 4px 0;
+}
+
+.ui textarea {
+    min-height: 80px;
+}
+
+.ui ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ui ul li {
+    position: relative;
+    padding: 8px 8px 8px 20px;
+}
+
+.ui ul li:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.84);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.ui ul li a {
+    display: block;
+    padding: 12px 16px 12px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.15);
+}
+
+.ui ul li a:hover {
+    background: #cf9;
+    margin-top: -4px;
+    padding-top: 16px;
+    border-top-color: rgba(0, 0, 0, 0.15);
+}
+
+.ui ul li:first-child a:hover {
+    margin-top: 0;
+    border-top: none;
+}
+
+.ui ul li:last-child a {
+    border-bottom-color: transparent;
+}
+
+.ui.container {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #fff;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    margin: 0 0 24px;
+    padding: 16px;
+    line-height: 1.42;
+    font-size: 14px;
+}
+
+.ui.container.inset {
+    box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(51, 51, 51, 0.84), 0 4px 0 rgba(51, 51, 51, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+}
+
+.ui.container.raised {
+    box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84), 8px 4px 0 rgba(0, 0, 0, 0.15), 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.ui.container.no-padding,
+.ui.container.list {
+    padding: 0;
+}
+
+.ui.container p:last-child {
+    margin-bottom: 0;
+}
+
+.ui.container p:first-child {
+    margin-top: 0;
+}
+
+.ui.heading {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.ui.menu {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #fff;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    padding: 0;
+    margin: 0 0 24px;
+}
+
+.ui.menu ul li {
+    padding: 0;
+}
+
+.ui.menu ul li:before {
+    display: none;
+}
+
+.ui.toolbar {
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #efefef;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    margin: 0;
+    padding: 0;
+    height: 48px;
+    align-items: space-between;
+    justify-items: flex-end;
+}
+
+.ui.toolbar .label {
+    flex: 1;
+    padding-left: 16px;
+}
+
+.ui.toolbar .buttons {
+    display: flex;
+}
+
+.ui.toolbar .buttons button {
+    margin: 0 0 0 4px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.84);
+    text-align: center;
+}
+
+.ui.toolbar .buttons button:active {
+    margin-left: 4px;
+}
+
+.ui.dropdown {
+    flex-direction: column;
+}
+
+.ui.dropdown button,
+.ui.dropdown ul {
+    width: 100%;
+}
+
+.ui.dropdown ul {
+    padding-top: 8px;
+}
+
+.ui.dropdown button {
+    background: #efefef;
+    position: relative;
+    z-index: 11;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ui.dropdown button:active {
+    background: #d6d6d6;
+}
+
+.ui.dropdown button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 8px;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    width: 4px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.84);
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.84), -4px -4px 0 rgba(0, 0, 0, 0.84), 4px -4px 0 rgba(0, 0, 0, 0.84), 0 -8px 0 rgba(0, 0, 0, 0.84), 4px -8px 0 rgba(0, 0, 0, 0.84), -4px -8px 0 rgba(0, 0, 0, 0.84), 8px -8px 0 rgba(0, 0, 0, 0.84), -8px -8px 0 rgba(0, 0, 0, 0.84);
+}
+
+.ui.dropdown ul {
+    position: relative;
+    z-index: 10;
+    margin: -4px 0 0 0;
+}
+
+.ui .button-group button+button,
+.ui.button-group button+button {
+    margin-left: 0;
+}
+
+.ui .button-group button+button:active,
+.ui.button-group button+button:active {
+    margin-left: 0;
+}
+
+.icon {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+}
+
+.icon.arrow-down {
+    background: rgba(0, 0, 0, 0.84);
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.84), -4px -4px 0 rgba(0, 0, 0, 0.84), 4px -4px 0 rgba(0, 0, 0, 0.84), 0 -8px 0 rgba(0, 0, 0, 0.84), 4px -8px 0 rgba(0, 0, 0, 0.84), -4px -8px 0 rgba(0, 0, 0, 0.84), 8px -8px 0 rgba(0, 0, 0, 0.84), -8px -8px 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 0;
+}
+
+.icon.arrow-up {
+    background: rgba(0, 0, 0, 0.84);
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.84), -4px -4px 0 rgba(0, 0, 0, 0.84), 4px -4px 0 rgba(0, 0, 0, 0.84), 0 -8px 0 rgba(0, 0, 0, 0.84), 4px -8px 0 rgba(0, 0, 0, 0.84), -4px -8px 0 rgba(0, 0, 0, 0.84), 8px -8px 0 rgba(0, 0, 0, 0.84), -8px -8px 0 rgba(0, 0, 0, 0.84);
+    transform: rotate(180deg);
+    margin: 0 8px 8px 8px;
+}
+
+.icon.arrow-right {
+    background: rgba(0, 0, 0, 0.84);
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.84), -4px -4px 0 rgba(0, 0, 0, 0.84), 4px -4px 0 rgba(0, 0, 0, 0.84), 0 -8px 0 rgba(0, 0, 0, 0.84), 4px -8px 0 rgba(0, 0, 0, 0.84), -4px -8px 0 rgba(0, 0, 0, 0.84), 8px -8px 0 rgba(0, 0, 0, 0.84), -8px -8px 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 0 4px 8px;
+    transform: rotate(-90deg);
+}
+
+.icon.arrow-left {
+    background: rgba(0, 0, 0, 0.84);
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.84), -4px -4px 0 rgba(0, 0, 0, 0.84), 4px -4px 0 rgba(0, 0, 0, 0.84), 0 -8px 0 rgba(0, 0, 0, 0.84), 4px -8px 0 rgba(0, 0, 0, 0.84), -4px -8px 0 rgba(0, 0, 0, 0.84), 8px -8px 0 rgba(0, 0, 0, 0.84), -8px -8px 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 4px 0px;
+    transform: rotate(90deg);
+}
+
+.icon.add {
+    background: rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 0;
+    box-shadow: -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 8px 0 0 rgba(0, 0, 0, 0.84), -8px 0 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 8px 0 rgba(0, 0, 0, 0.84), 0 -8px 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 4px 8px;
+}
+
+.icon.close {
+    background: rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 0;
+    box-shadow: -4px -4px 0 rgba(0, 0, 0, 0.84), 4px 4px 0 rgba(0, 0, 0, 0.84), 8px 8px 0 rgba(0, 0, 0, 0.84), -8px -8px 0 rgba(0, 0, 0, 0.84), 4px -4px 0 rgba(0, 0, 0, 0.84), -4px 4px 0 rgba(0, 0, 0, 0.84), -8px 8px 0 rgba(0, 0, 0, 0.84), 8px -8px 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 4px 8px;
+}
+
+.icon.minus {
+    background: rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 0;
+    box-shadow: 4px 0 0 rgba(0, 0, 0, 0.84), -4px 0 0 rgba(0, 0, 0, 0.84), 8px 0 0 rgba(0, 0, 0, 0.84), -8px 0 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 4px 8px;
+}
+
+.icon.menu {
+    background: rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 0;
+    box-shadow: 4px 0 0 rgba(0, 0, 0, 0.84), -4px 0 0 rgba(0, 0, 0, 0.84), 8px 0 0 rgba(0, 0, 0, 0.84), -8px 0 0 rgba(0, 0, 0, 0.84), 0 -8px 0 rgba(0, 0, 0, 0.84), 4px -8px 0 rgba(0, 0, 0, 0.84), -4px -8px 0 rgba(0, 0, 0, 0.84), 8px -8px 0 rgba(0, 0, 0, 0.84), -8px -8px 0 rgba(0, 0, 0, 0.84), 0 8px 0 rgba(0, 0, 0, 0.84), 4px 8px 0 rgba(0, 0, 0, 0.84), -4px 8px 0 rgba(0, 0, 0, 0.84), 8px 8px 0 rgba(0, 0, 0, 0.84), -8px 8px 0 rgba(0, 0, 0, 0.84);
+    margin: 8px 8px 4px 8px;
+}
+
+.page {
+    width: 100%;
+    min-height: 100%;
+    overflow: auto;
+    padding: 24px;
+    margin: auto;
+    background: repeating-linear-gradient(45deg, #efdcef, #efdcef 16px, #e0d0e0 16px, #e0d0e0 32px);
+}
+
+.page section {
+    max-width: 640px;
+    margin: auto;
+}
+
+.grid {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 0;
+    background-image: linear-gradient(0deg, transparent 0px, transparent 3px, rgba(0, 0, 0, 0.2) 4px, transparent 4px, transparent 7px, rgba(0, 0, 0, 0.2) 8px, transparent 8px, transparent 11px, rgba(0, 0, 0, 0.2) 12px, transparent 12px, transparent 15px, rgba(0, 0, 0, 0.2) 16px), linear-gradient(90deg, transparent 0px, transparent 3px, rgba(0, 0, 0, 0.2) 4px, transparent 4px, transparent 7px, rgba(0, 0, 0, 0.2) 8px, transparent 8px, transparent 11px, rgba(0, 0, 0, 0.2) 12px, transparent 12px, transparent 15px, rgba(0, 0, 0, 0.2) 16px), linear-gradient(0deg, transparent 0px, transparent 15px, rgba(0, 0, 0, 0.25) 16px), linear-gradient(90deg, transparent 0px, transparent 15px, rgba(0, 0, 0, 0.25) 16px);
+    background-size: 16px 16px;
+}

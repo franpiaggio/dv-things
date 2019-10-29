@@ -1,0 +1,13 @@
+1) Definir 3 dificultades y que eso defina la cantidad de intentos
+2) Mostrar el registro de los números ingresados
+3) Agregar un timer que cambie según la dificultades. Al finalizar ese tiempo pierden
+4) Agregar un registro que indique en cuanto tiempo se resolvió
+5) Agregar un condicional que dependiendo lo rápido que se resolvió te de un mensaje distinto
+6) Configurar el rango del número a adivinar
+7) Si el número a adivinar tiene 2 dígitos o más, que el sistema te indique cuales de esos dígitos estan bien
+    * Ejemplo:
+        * El sistema genera 1234
+        * El usuario ingrea 1211
+        * El sistema indica: '12' --> bien - '11' --> mal
+        * El usuario vuelve a intentar con: '1235'
+        * El sistema indica: '123' --> bien - '5' --> mal

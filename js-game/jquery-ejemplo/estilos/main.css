@@ -1,0 +1,62 @@
+/* Si hay que ocultar o mostrar puedo agregar o quitar estas clases */
+.hide{
+    display: none !important;
+}
+.destacado{
+    color: red;
+}
+/* Layout general */
+.page{
+    height: 100vh;
+}
+.intro,
+.instructions,
+.game,
+.result{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.intro .emoji{
+    font-size: 3rem;
+}
+.indicadores{
+    width: 100%;
+}
+.indicador-intentos{
+    font-family: "Press Start 2P", cursive;
+    height: 48px;
+    text-align: left;
+    line-height: 1;
+    margin-top: 4px;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    margin-left: 0;
+    box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(51, 51, 51, 0.84), 0 4px 0 rgba(51, 51, 51, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    background: #bfff80;
+}
+.indicador-pistas{
+    background: #f69;
+    color: rgba(0, 0, 0, 0.84);
+    border: none;
+    margin: 4px 0;
+    padding: 16px;
+    box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.5), inset -4px -4px 0 rgba(0, 0, 0, 0.15), -4px 0 0 rgba(0, 0, 0, 0.84), 4px 0 0 rgba(0, 0, 0, 0.84), 0 4px 0 rgba(0, 0, 0, 0.84), 0 -4px 0 rgba(0, 0, 0, 0.84);
+    font-family: "Press Start 2P", cursive;
+    height: 48px;
+    text-align: left;
+    line-height: 1;
+    margin-top: 4px;
+    margin-left: 16px;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.result img{
+    width: 100%;
+}
+
