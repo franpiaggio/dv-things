@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamaño de fuente variable</title>
+    <style>
+        /*
+        * Los media queries van a respetar el criterio mobile first
+        * Por lo que primero escribimos el tamaño base, que aplica desde mobile
+        * hasta que indique lo contrario en una resolución mayor
+        */
+        .titulo{
+            font-family: sans-serif;
+            /*
+            * Por default la etiqueta html tiene 16px de font-size
+            * 1rem = 16px
+            */
+            font-size: 1rem;
+        }
+
+        /*
+        * A partir de 480px
+        */
+        @media (min-width: 480px){
+            .titulo{
+                /* Piso la regla anterior */
+                font-size: 3rem;
+            }
+        }
+
+        /*
+        * A partir de 768px
+        */
+        @media (min-width: 768px){
+            .titulo{
+                /* Piso la regla anterior */
+                font-size: 6rem;
+            }
+        }
+
+        /*
+        * Detalle importante: 
+        * Al usar un selector de clase siempre, a la hora de pisar
+          mis estilos no genero conflictos y siempre es válido el último
+          en aplicarse.
+
+        * Si abrís la consola e inspeccionas el elemento vas a ver 
+          tachados los estilos anteriores y el último aplicado
+        */
+    </style>
+</head>
+<body>
+    <h1 class="titulo">El tamaño de fuente va cambiando dependiendo el tamaño de pantalla</h1>
+</body>
+</html>
